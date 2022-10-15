@@ -43,7 +43,9 @@ apt-get install \
     xz-utils
 ```
 For other destr [here](https://mxe.cc/#requirements)
+
 **Step 2:** Building Qt for Windows
+
 ```bash
 cd mxe
 ```
