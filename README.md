@@ -4,7 +4,7 @@
 ```bash
 git clone https://github.com/mxe/mxe.git
 ```
-**Step 2:** Install [dependencies](https://mxe.cc/#requirements)
+**Step 2:** Install dependencies
 
 Debian
 ```bash
