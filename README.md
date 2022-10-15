@@ -1,0 +1,1 @@
+# Deploy-Qt-application-for-Windows-using-mxe-on-Linux
