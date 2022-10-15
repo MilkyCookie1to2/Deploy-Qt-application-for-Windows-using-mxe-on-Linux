@@ -1,10 +1,10 @@
 # Deploy-Qt-application-for-Windows-using-mxe-on-Linux
 
-**Step 1:** Getting MXE
+**Step 1:** Get MXE
 ```bash
 git clone https://github.com/mxe/mxe.git
 ```
-**Step 2:** Installing build [dependencies](https://mxe.cc/#requirements)
+**Step 2:** Install [dependencies](https://mxe.cc/#requirements)
 
 Debian
 ```bash
@@ -44,7 +44,7 @@ apt-get install \
 ```
 For other destr [here](https://mxe.cc/#requirements)
 
-**Step 2:** Building Qt for Windows
+**Step 2:** Build Qt for Windows
 
 ```bash
 cd mxe
@@ -57,6 +57,36 @@ if u use extra functionality build qt5 or qt6, depending on the version of Qt
 ```bash
 make qt5
 ```
+
 ```bash
 make qt6
 ```
+
+If u want a 64-bit executable application, build Qt with
+```bash
+make MXE_TARGETS=x86_64-w64-mingw32.static qtbase
+```
+
+Unfortunately, I could not build qt6, but with qt5 the application was able to deploy, despite the fact that I used qt6. If u lucky, u can build qt6)
+
+**Step 3:** Prepare environment
+
+```bash
+export PATH=<directory of mxe folder>/usr/bin:$PATH  
+```
+
+**Step 4:** Get to the directory of your app(WHERE SOURCES, NOT BUILD), and run the Qt Makefile generator tool:
+
+```bash
+<directory of mxe folder>/usr/bin/i686-w64-mingw32.static-qmake-qt5
+```
+
+**Step 5:** Build your project
+
+```bash
+make
+```
+You should find the binary in the ./release directory
+
+
+***HAPPY END FOR RAIK199X***
